@@ -1,0 +1,28 @@
+<div class ="envolta-tabela">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td class="align-middle" class ="cabecalho">Episódio N#</td>
+        <td class="align-middle" class ="cabecalho">Título</td>
+        <td class="align-middle" class ="cabecalho">Diretor</td>
+        <td class="align-middle" class ="cabecalho">Produtor</td>
+        <td class="align-middle" class ="cabecalho">Ano de Lançamento</td>
+        <td class="align-middle" class ="cabecalho">Sinopse</td>
+        <td class="align-middle" class ="cabecalho"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let f of filmes">
+        <td>{{f.episode_id}}</td>
+        <td>{{f.title}}</td>
+        <td>{{f.director}}</td>
+        <td>{{f.producer}}</td>
+        <td>{{f.release_date}}</td>
+        <td>{{f.opening_crawl}}</td>
+        <td>
+          <button mat-raised-button id="verMais-button"  (click)="openModal()">Ver mais...</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
